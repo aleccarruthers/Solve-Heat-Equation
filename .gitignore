@@ -1,0 +1,31 @@
+# ignore all logs
+*.log
+
+# ignore config.in
+config.h.in*
+
+# ignore object files
+**.o
+
+# ignore exectable
+heatsolver
+
+# Miscellaneous
+src/*.e*
+src/.deps/
+tests/.deps
+tests/Makefile
+tests/*.trs
+depcomp
+missing
+stamp*
+autom4te.cache/
+install-sh
+config.h
+aclocal.m4
+compile
+config.status
+configure
+Makefile.in
+src/*.gcda
+src/*.gcno

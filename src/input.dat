@@ -1,0 +1,39 @@
+# -*-getpot-*-
+# -----------------------------------------------------------
+# -----------------------------------------------------------
+
+# 1D and 2D Heat Conduction Input File
+
+# Number of Nodes: For 2D, if the input number of nodes does not have a perfect square, the input
+# nodes will be used as the number of nodes in both the x and y direction, i.e. inputing 15 would
+# lead to a domain with 225 total nodes (15 x 15). Entering 400, would create a domain of size 
+# 20 x 20
+nodes = 10
+
+# Supported Solvers: 'GS' for Gauss-Seidel, 'Jacobi' for Jacobi, or 'petsc' for PETSc solver
+solver = petsc
+
+# Supported Dimensions: 1 or 2		
+dimension = 2
+
+# Supported Finite Differencing Orders: 2 (both solvers) or 4 (only Gauss-Seidel)
+finorder = 4
+
+# Verification Mode (t: verification, f: standard)
+verification = t
+
+# Log-Level ('standard': standard output, 'debug': debug mode)
+# 'standard' has 3 output sections: inputs, the computed normalized error, and performance metrics
+# 'debug': Same three outputs along with the A matrix, the MASA source vector, and grid indices printed
+loglevel = standard
+
+# Maximum number of iterations for numerical solver (default: 250000)
+# INPUT must be an integer with no special characters
+max_iterations = 250000
+
+# Suggested and Default Inputs (Please keep these as the default for this iteration of the code.)
+length = 1.0
+frequency = 5.0
+
+# Thermal Conductivity
+k = 1.0
